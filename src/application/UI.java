@@ -28,6 +28,11 @@ public class UI {// nessa clase irei criar o metodo print board da minha classe 
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+    public static void clearScreen(){ //limpeza de pele, ele ta sendo chamado na classe principal
+        System.out.println("\003[H\033[2J");
+        System.out.flush();
+    }
+
     public static ChessPosition readChessPosition(Scanner sc) {//ler posição do xadrez
         try{
         String s = sc.nextLine();
